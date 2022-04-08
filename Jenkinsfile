@@ -25,7 +25,7 @@ pipeline {
         }
         stage('build local repo') {
             steps {
-                sh 'mvn deploy:deploy-file -Durl=file:${project.basedir}/repo -Dfile=*.jar -DgroupId=net.stickycode.deploy -DartifactId=sticky-deployer-embedded -Dpackaging=jar -Dversion=0.9'
+                sh 'mvn deploy:deploy-file -Durl=file:///repo -Dfile=*.jar -DgroupId=net.stickycode.deploy -DartifactId=sticky-deployer-embedded -Dpackaging=jar -Dversion=0.9'
            }
         }
         
