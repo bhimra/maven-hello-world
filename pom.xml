@@ -58,7 +58,7 @@
 	<repositories>
 		<!--other repositories if any-->
 		<repository>
-			<id>my-app.repo</id>
+			<id>repo</id>
 			<name>repo</name>
 			<url>file:///var/lib/jenkins/workspace/maven-beta/repo</url>
 		</repository>
@@ -69,7 +69,7 @@
 			<artifactId>sticky-deployer-embedded</artifactId>
 			<version>0.9</version>
 			<scope>system</scope>
-			<relativePath>/var/lib/jenkins/workspace/maven-beta/repo/sticky-deployer-embedded-0.9-sample.jar</relativePath>
+			<systemPath>/var/lib/jenkins/workspace/maven-beta/repo/sticky-deployer-embedded-0.9-sample.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.sonatype.nexus.plugins</groupId>
