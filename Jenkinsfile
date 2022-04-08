@@ -26,7 +26,7 @@ pipeline {
         stage('build local repo') {
             steps {
                 sh 'cp -r /var/lib/jenkins/workspace/maven-beta/repo/*.jar /root/.m2/repository/org/apache/maven/plugins/maven-deploy-plugin/2.8.2'
-                sh 'mvn deploy:deploy-file'
+                sh 'mvn deploy -DskipTests=true'
            }
         }
         
