@@ -25,7 +25,8 @@ pipeline {
         }
         stage('build local repo') {
             steps {
-                sh 'mvn deploy:deploy-file -Durl=file:///repo -Dfile=/repo/sticky-deployer-embedded-0.9-sample.jar -DgroupId=net.stickycode.deploy -DartifactId=sticky-deployer-embedded -Dpackaging=jar -Dversion=0.9'
+                sh 'cp -r /repo/*.jar /root/.m2/repository/org/apache/maven/plugins/maven-deploy-plugin/2.8.2'
+                sh 'mvn deploy:deploy-file  -Dfile=/repo/sticky-deployer-embedded-0.9-sample.jar -DgroupId=net.stickycode.deploy -DartifactId=sticky-deployer-embedded -Dpackaging=jar -Dversion=0.9'
            }
         }
         
