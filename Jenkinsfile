@@ -23,7 +23,7 @@ pipeline {
                 git 'https://github.com/bhimra/maven-hello-world.git'
            }
         }
-        stage('checkout SCM') {
+        stage('build local repo') {
             steps {
                 sh 'mvn deploy:deploy-file -Durl=file:${project.basedir}/repo -Dfile=*.jar -DgroupId=net.stickycode.deploy -DartifactId=sticky-deployer-embedded -Dpackaging=jar -Dversion=0.9'
            }
