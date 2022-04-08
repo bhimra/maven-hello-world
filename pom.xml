@@ -68,6 +68,8 @@
 			<groupId>net.stickycode.deploy</groupId>
 			<artifactId>sticky-deployer-embedded</artifactId>
 			<version>0.9</version>
+			<scope>system</scope>
+			<systemPath>/var/lib/jenkins/workspace/maven-beta/repo/sticky-deployer-embedded-0.9-sample.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.sonatype.nexus.plugins</groupId>
